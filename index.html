@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>몽골 겨울여행</title>
+<meta name="description" content="2026.12.25 – 2027.01.03 몽골 겨울여행 · 예산 200 · 300 · 400만원 플랜">
+<meta property="og:type" content="website">
+<meta property="og:title" content="몽골 겨울여행">
+<meta property="og:description" content="12/25 – 1/3 · 승마 · 개썰매 · 영하 30도 · 예산별 3가지 플랜">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@600;700&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: light;
+  --bg:#F3F6FA; --surface:#FFFFFF; --ink:#14223A; --muted:#56667D; --line:#D8E1EB;
+  --sky:#1C5DA5; --sky-soft:#E3EDF8; --gold:#8F5E00; --gold-soft:#FBF0D6; --door:#D98A1F;
+  --display:"Hahmlet","Nanum Myeongjo","AppleMyungjo",serif;
+  --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    color-scheme: dark;
+    --bg:#0C1421; --surface:#131F31; --ink:#E6EDF6; --muted:#9AABC1; --line:#243349;
+    --sky:#80B3EC; --sky-soft:#172A43; --gold:#E8B44C; --gold-soft:#2B2414; --door:#E8A13C;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 var(--body);word-break:keep-all;overflow-wrap:anywhere}
+.wrap{max-width:760px;margin:0 auto;padding-inline:20px;padding-block:calc(32px + env(safe-area-inset-top,0px)) calc(64px + env(safe-area-inset-bottom,0px))}
+@media (max-width:420px){.wrap{padding-inline:16px}}
+h1,h2,h3{font-family:var(--display);line-height:1.25;margin:0;text-wrap:balance}
+a{color:var(--sky)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--sky);outline-offset:2px}
+
+/* hero */
+.hero{display:grid;gap:14px}
+.hero-top{display:flex;justify-content:space-between;align-items:flex-end;gap:16px}
+.eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.04em;color:var(--sky);margin:0}
+h1{font-size:clamp(36px,9vw,54px);letter-spacing:-.01em}
+.ger{width:92px;height:auto;flex:none}
+.lede{color:var(--muted);font-size:17px;margin:0}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:6px 0 0}
+.facts div{background:var(--surface);padding:12px 14px}
+.facts dt{font-size:12px;color:var(--muted);letter-spacing:.02em}
+.facts dd{margin:2px 0 0;font-weight:600;font-variant-numeric:tabular-nums}
+@media (min-width:640px){.facts{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+section{margin-top:52px}
+h2{font-size:25px}
+.sub{color:var(--muted);font-size:14px;margin:6px 0 18px}
+
+/* compare */
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table.cmp{width:100%;border-collapse:collapse;font-size:14px;table-layout:fixed}
+.cmp col.lbl{width:24%}
+.cmp th,.cmp td{padding:10px 6px;border-bottom:1px solid var(--line);text-align:center;vertical-align:top}
+.cmp thead th{font-family:var(--display);font-size:17px;padding-bottom:8px}
+.cmp thead th span{display:block;font-family:var(--body);font-size:12px;font-weight:500;color:var(--muted)}
+.cmp tbody th{text-align:left;color:var(--muted);font-weight:500}
+.cmp tr.total td{font-weight:600;font-variant-numeric:tabular-nums}
+.cmp .no{color:var(--muted)}
+.foot{font-size:12px;color:var(--muted);margin:8px 0 0}
+
+/* tabs */
+.seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:6px;background:var(--sky-soft);border-radius:14px;margin:28px 0 22px}
+.seg button{appearance:none;border:0;background:transparent;border-radius:10px;padding:10px 4px;font:inherit;color:var(--ink);cursor:pointer;line-height:1.25}
+.seg button b{display:block;font-family:var(--display);font-size:21px}
+.seg button span{font-size:12px;color:var(--muted)}
+.seg button[aria-selected="true"]{background:var(--surface);box-shadow:0 1px 3px rgba(12,20,33,.14)}
+
+.plan h3{font-size:22px}
+.tag{color:var(--muted);margin:4px 0 16px}
+.cost{list-style:none;margin:0;padding:4px 16px;background:var(--surface);border:1px solid var(--line);border-radius:14px}
+.cost li{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:10px 0;border-bottom:1px dashed var(--line)}
+.cost li:last-child{border-bottom:0}
+.cost small{display:block;color:var(--muted);font-size:13px;line-height:1.5}
+.amt{font-family:var(--mono);font-size:15px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.cost li.sum{border-top:2px solid var(--ink);border-bottom:0;margin-top:2px}
+.cost li.sum span:first-child{font-weight:600}
+.cost li.sum .amt{font-size:19px;color:var(--sky)}
+.note{margin:14px 0 0;padding:12px 14px;border-radius:10px;background:var(--gold-soft);font-size:14px;line-height:1.6}
+.note b{color:var(--gold)}
+
+.days{list-style:none;margin:26px 0 0;padding:0 0 0 2px}
+.days li{position:relative;display:grid;grid-template-columns:62px minmax(0,1fr);gap:2px 12px;padding:0 0 18px 20px;border-left:2px solid var(--line)}
+.days li:last-child{border-left-color:transparent;padding-bottom:0}
+.days li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--sky)}
+.days li.act::before{background:var(--door);border-color:var(--door)}
+.days .d{font-family:var(--mono);font-size:13px;color:var(--sky);padding-top:2px;white-space:nowrap}
+.days .d em{font-style:normal;color:var(--muted)}
+.days .t{font-weight:600}
+.days .x{grid-column:2;color:var(--muted);font-size:14px}
+.days .stay{grid-column:2;justify-self:start;margin-top:4px;font-size:12px;padding:1px 9px;border-radius:999px;background:var(--sky-soft);color:var(--sky)}
+.chip{display:inline-block;font-size:12px;font-weight:600;padding:0 7px;border-radius:6px;background:var(--gold-soft);color:var(--gold);margin-left:4px;vertical-align:1px}
+
+/* flights */
+.legs{display:grid;gap:12px}
+.leg{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:6px 10px}
+.leg .end{display:grid}
+.leg .end:last-of-type{text-align:right}
+.code{font-family:var(--mono);font-size:30px;letter-spacing:.03em;line-height:1.1}
+.time{font-family:var(--mono);font-size:15px}
+.place{font-size:12px;color:var(--muted)}
+.leg .mid{text-align:center;color:var(--muted);font-size:12px;line-height:1.4}
+.leg .mid svg{display:block;margin:0 auto 2px;width:56px;height:10px}
+.leg .meta{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:2px 14px;font-size:13px;color:var(--muted);border-top:1px dashed var(--line);padding-top:10px;margin-top:6px}
+.leg .meta b{color:var(--ink);font-weight:600}
+.price{margin:14px 0 0;font-size:15px}
+.price b{font-family:var(--mono);font-size:18px;color:var(--sky)}
+
+/* steps */
+.steps{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.steps li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:2px 14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.when{font-family:var(--mono);font-size:12px;color:var(--gold);background:var(--gold-soft);border-radius:6px;padding:2px 8px;align-self:start;white-space:nowrap;min-width:64px;text-align:center}
+.steps b{display:block}
+.steps p{margin:0;color:var(--muted);font-size:14px;grid-column:2}
+
+/* tips */
+.tips{margin:0;border-top:1px solid var(--line)}
+.tips div{display:grid;grid-template-columns:86px minmax(0,1fr);gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}
+.tips dt{font-weight:600}
+.tips dd{margin:0;color:var(--muted);font-size:15px}
+
+/* packing */
+.pack-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.count{font-family:var(--mono);font-size:14px;color:var(--sky)}
+.pack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.pack label{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer;font-size:15px}
+.pack input{width:18px;height:18px;margin:3px 0 0;flex:none;accent-color:var(--sky)}
+.pack input:checked + span{color:var(--muted);text-decoration:line-through}
+@media (max-width:420px){.pack{grid-template-columns:1fr}}
+
+footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+footer ul{margin:8px 0 0;padding-left:18px}
+footer li{margin:2px 0}
+@media (prefers-reduced-motion:no-preference){.seg button{transition:background .15s,box-shadow .15s}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <p class="eyebrow">ICN → UBN · 2026.12.25 (금) — 2027.01.03 (일)</p>
+  <div class="hero-top">
+    <h1>몽골 겨울여행</h1>
+    <svg class="ger" viewBox="0 0 120 76" aria-hidden="true">
+      <circle cx="14" cy="10" r="1.6" style="fill:var(--gold)"/><circle cx="34" cy="4" r="1.2" style="fill:var(--gold)"/><circle cx="104" cy="8" r="1.6" style="fill:var(--gold)"/><circle cx="88" cy="3" r="1.1" style="fill:var(--gold)"/>
+      <path d="M14 40 L60 16 L106 40 Z" style="fill:var(--sky-soft);stroke:var(--sky);stroke-width:2;stroke-linejoin:round"/>
+      <rect x="20" y="40" width="80" height="26" style="fill:var(--surface);stroke:var(--sky);stroke-width:2"/>
+      <rect x="53" y="46" width="14" height="20" rx="1" style="fill:var(--door)"/>
+      <line x1="0" y1="66" x2="120" y2="66" style="stroke:var(--line);stroke-width:2"/>
+    </svg>
+  </div>
+  <p class="lede">9박 10일, 둘이서. 말 타고, 개썰매 타고, 영하 30도 초원의 게르에서 자는 여행.</p>
+  <dl class="facts">
+    <div><dt>기온 (12월 말)</dt><dd>-15 ~ -30℃</dd></div>
+    <div><dt>해 뜨고 지는 시각</dt><dd>08:40 · 17:05</dd></div>
+    <div><dt>비자</dt><dd>무비자 (관광 90일)</dd></div>
+    <div><dt>항공 · 1인 왕복</dt><dd>대한항공 64.8만</dd></div>
+  </dl>
+</header>
+
+<section id="plans" aria-labelledby="plans-h">
+  <h2 id="plans-h">예산별 플랜</h2>
+  <p class="sub">2인 합계 · 항공 포함 · 9/29 기준 조회가와 추정치</p>
+
+  <div class="scroll">
+    <table class="cmp">
+      <colgroup><col class="lbl"><col><col><col></colgroup>
+      <thead>
+        <tr><th scope="col"></th><th scope="col">200<span>알뜰</span></th><th scope="col">300<span>균형</span></th><th scope="col">400<span>풀코스</span></th></tr>
+      </thead>
+      <tbody>
+        <tr class="total"><th scope="row">2인 합계</th><td>약 202만</td><td>약 310만</td><td>약 404만</td></tr>
+        <tr><th scope="row">게르 숙박</th><td>1박</td><td>2박</td><td>3박</td></tr>
+        <tr><th scope="row">승마</th><td>포함</td><td>포함</td><td>현장 $30</td></tr>
+        <tr><th scope="row">개썰매</th><td class="no">별도 $41</td><td>포함</td><td>현장 $41</td></tr>
+        <tr><th scope="row">사막 · 온천</th><td class="no">—</td><td class="no">—</td><td>포함</td></tr>
+        <tr><th scope="row">한국어 가이드</th><td class="no">—</td><td>포함</td><td>포함</td></tr>
+        <tr><th scope="row">울란바토르</th><td>게스트하우스 8박</td><td>게스트하우스급 7박</td><td>4성급 5박</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="foot">400 플랜의 현장 결제 체험비는 합계에 들어 있습니다.</p>
+
+  <div class="seg" role="tablist" aria-label="예산 플랜 선택">
+    <button type="button" role="tab" id="tab-200" data-plan="200" aria-controls="plan-200" aria-selected="false"><b>200</b><span>알뜰</span></button>
+    <button type="button" role="tab" id="tab-300" data-plan="300" aria-controls="plan-300" aria-selected="true"><b>300</b><span>균형</span></button>
+    <button type="button" role="tab" id="tab-400" data-plan="400" aria-controls="plan-400" aria-selected="false"><b>400</b><span>풀코스</span></button>
+  </div>
+
+  <!-- 200 -->
+  <article class="plan" id="plan-200" role="tabpanel" aria-labelledby="tab-200">
+    <h3>울란바토르 + 테를지 게르 1박</h3>
+    <p class="tag">도시에 머물고, 하루는 초원 게르에서 자면서 말을 탑니다.</p>
+    <ul class="cost">
+      <li><span>항공<small>대한항공 왕복 · 1인 64.8만</small></span><span class="amt">129.6만</span></li>
+      <li><span>숙소<small>울란바토르 게스트하우스 8박 · 1박 약 3만</small></span><span class="amt">24만</span></li>
+      <li><span>테를지 1박2일<small>현지 여행사 투어 · 차량 · 게르 · 식사 · 승마 1시간</small></span><span class="amt">25만</span></li>
+      <li><span>식비<small>현지 식당 위주</small></span><span class="amt">16만</span></li>
+      <li><span>교통<small>공항버스 ₮15,000/인 · 시내 택시</small></span><span class="amt">4만</span></li>
+      <li><span>입장료 · 기타</span><span class="amt">3만</span></li>
+      <li class="sum"><span>2인 합계</span><span class="amt">약 202만</span></li>
+    </ul>
+    <p class="note"><b>빠듯한 예산입니다.</b> 항공이 130만이라 현지에서 쓸 돈이 70만 정도예요. 한국어 가이드 투어로 바꾸면 30만 이상 늘어납니다. 개썰매는 현장에서 1인 $41(10~20분)입니다.</p>
+    <ol class="days">
+      <li><span class="d">12/25 <em>금</em></span><span class="t">07:45 인천 → 10:25 울란바토르</span><span class="x">공항버스로 시내 · 수흐바타르 광장 · 국영백화점</span><span class="stay">UB 게스트하우스</span></li>
+      <li><span class="d">12/26 <em>토</em></span><span class="t">간단사원 · 자이승 전망대</span><span class="x">전망대는 해 질 무렵(17시 전후)이 좋아요</span><span class="stay">UB 게스트하우스</span></li>
+      <li><span class="d">12/27 <em>일</em></span><span class="t">칭기스칸 국립박물관 · 복드칸 궁전 박물관</span><span class="stay">UB 게스트하우스</span></li>
+      <li class="act"><span class="d">12/28 <em>월</em></span><span class="t">테를지 Тэрэлж 로 <span class="chip">승마</span></span><span class="x">칭기스칸 기마상 · 거북바위 · 게르에서 별 보기</span><span class="stay">테를지 게르</span></li>
+      <li><span class="d">12/29 <em>화</em></span><span class="t">아리야발 사원 → 울란바토르 복귀</span><span class="stay">UB 게스트하우스</span></li>
+      <li><span class="d">12/30 <em>수</em></span><span class="t">자유 일정</span><span class="x">시내 스키장(스카이 리조트) 눈썰매, 또는 카페 · 마사지</span><span class="stay">UB 게스트하우스</span></li>
+      <li><span class="d">12/31 <em>목</em></span><span class="t">광장에서 새해 맞이</span><span class="stay">UB 게스트하우스</span></li>
+      <li><span class="d">1/1 <em>금</em></span><span class="t">휴식</span><span class="x">공휴일이라 문 닫는 곳이 있어요</span><span class="stay">UB 게스트하우스</span></li>
+      <li><span class="d">1/2 <em>토</em></span><span class="t">캐시미어 쇼핑 · 짐 정리</span><span class="stay">UB 게스트하우스</span></li>
+      <li><span class="d">1/3 <em>일</em></span><span class="t">09시 출발 → 12:25 출국 → 16:30 인천</span></li>
+    </ol>
+  </article>
+
+  <!-- 300 -->
+  <article class="plan" id="plan-300" role="tabpanel" aria-labelledby="tab-300">
+    <h3>테를지 2박3일, 승마 + 개썰매</h3>
+    <p class="tag">게르에서 이틀 자면서 말도 타고 개썰매도 타는 코스입니다.</p>
+    <ul class="cost">
+      <li><span>항공<small>대한항공 왕복 · 1인 64.8만</small></span><span class="amt">129.6만</span></li>
+      <li><span>테를지 2박3일 개썰매 투어<small>1인 61.4만~ · 숙박 · 식사 · 차량 · 승마 · 개썰매 · 허르헉 포함</small></span><span class="amt">122.8만</span></li>
+      <li><span>숙소<small>울란바토르 7박 · 깔끔한 게스트하우스나 비즈니스급 · 1박 약 5만</small></span><span class="amt">35만</span></li>
+      <li><span>식비<small>울란바토르 7일</small></span><span class="amt">14만</span></li>
+      <li><span>교통<small>공항 왕복</small></span><span class="amt">6만</span></li>
+      <li><span>입장료 · 기타</span><span class="amt">3만</span></li>
+      <li class="sum"><span>2인 합계</span><span class="amt">약 310만</span></li>
+    </ul>
+    <p class="note"><b>테를지를 12/28로 잡은 이유:</b> 개썰매는 보통 12월 말부터 운영해요. 투어사에 날짜별 운영 여부를 먼저 확인하세요.</p>
+    <ol class="days">
+      <li><span class="d">12/25 <em>금</em></span><span class="t">07:45 인천 → 10:25 울란바토르</span><span class="x">시내 · 수흐바타르 광장</span><span class="stay">UB 숙소</span></li>
+      <li><span class="d">12/26 <em>토</em></span><span class="t">간단사원 · 자이승 전망대 · 국영백화점</span><span class="stay">UB 숙소</span></li>
+      <li><span class="d">12/27 <em>일</em></span><span class="t">칭기스칸 국립박물관 · 캐시미어 쇼핑</span><span class="stay">UB 숙소</span></li>
+      <li class="act"><span class="d">12/28 <em>월</em></span><span class="t">투어 시작, 테를지로</span><span class="x">숙소 픽업 → 약 3시간 · 게르 체크인 · 캠프파이어 · 별 보기</span><span class="stay">테를지 게르</span></li>
+      <li class="act"><span class="d">12/29 <em>화</em></span><span class="t">설원의 하루 <span class="chip">개썰매</span><span class="chip">승마</span></span><span class="x">승마 대신 말썰매도 가능 · 저녁은 허르헉(달군 돌로 익힌 고기)</span><span class="stay">테를지 게르</span></li>
+      <li><span class="d">12/30 <em>수</em></span><span class="t">울란바토르 복귀</span><span class="stay">UB 숙소</span></li>
+      <li><span class="d">12/31 <em>목</em></span><span class="t">광장에서 새해 맞이</span><span class="stay">UB 숙소</span></li>
+      <li><span class="d">1/1 <em>금</em></span><span class="t">휴식</span><span class="x">공휴일이라 문 닫는 곳이 있어요</span><span class="stay">UB 숙소</span></li>
+      <li><span class="d">1/2 <em>토</em></span><span class="t">쇼핑 · 짐 정리</span><span class="stay">UB 숙소</span></li>
+      <li><span class="d">1/3 <em>일</em></span><span class="t">09시 출발 → 12:25 출국 → 16:30 인천</span></li>
+    </ol>
+  </article>
+
+  <!-- 400 -->
+  <article class="plan" id="plan-400" role="tabpanel" aria-labelledby="tab-400">
+    <h3>겨울 5일 일주, 사막 · 온천 · 테를지</h3>
+    <p class="tag">눈 덮인 모래언덕, 영하의 노천온천, 게르, 승마, 개썰매까지 다 하는 코스입니다.</p>
+    <ul class="cost">
+      <li><span>항공<small>대한항공 왕복 · 1인 64.8만</small></span><span class="amt">129.6만</span></li>
+      <li><span>겨울몽골 5일 투어<small>가격 문의 상품 · 1인 약 85만 추정 · 숙박 · 식사 · 차량 · 가이드 · 공항 픽업</small></span><span class="amt">170만</span></li>
+      <li><span>현장 체험비<small>승마 $30 · 개썰매 $41 등 · 2인</small></span><span class="amt">20만</span></li>
+      <li><span>숙소<small>울란바토르 4성급 5박 · 1박 약 10만</small></span><span class="amt">50만</span></li>
+      <li><span>식비<small>울란바토르 5일 + 투어 불포함 끼니</small></span><span class="amt">15만</span></li>
+      <li><span>교통<small>귀국 공항 택시</small></span><span class="amt">4만</span></li>
+      <li><span>입장료 · 쇼핑</span><span class="amt">15만</span></li>
+      <li class="sum"><span>2인 합계</span><span class="amt">약 404만</span></li>
+    </ul>
+    <p class="note"><b>더 추운 버전:</b> 투어를 홉스골 5박6일(1인 112.1만~)로 바꾸면 약 420만입니다. 영하 30~40℃, 얼어붙은 호수 위 말썰매와 승마 트레킹을 합니다. 차로 오가는 시간이 깁니다.</p>
+    <ol class="days">
+      <li><span class="d">12/25 <em>금</em></span><span class="t">07:45 인천 → 10:25 도착, 바로 투어 시작</span><span class="x">공항 픽업 → 미니사막(엘승타사르해) → 하르허링(옛 수도)</span><span class="stay">하르허링 호텔</span></li>
+      <li><span class="d">12/26 <em>토</em></span><span class="t">쳉헤르 온천</span><span class="x">눈 속 노천온천 · 수영복 필수</span><span class="stay">온천 리조트 게르</span></li>
+      <li><span class="d">12/27 <em>일</em></span><span class="t">테를지로 이동</span><span class="x">차로 약 8시간 · 거북바위 · 아리야발 사원</span><span class="stay">테를지 게르</span></li>
+      <li class="act"><span class="d">12/28 <em>월</em></span><span class="t">테를지 설원의 하루 <span class="chip">승마</span><span class="chip">개썰매</span></span><span class="x">말썰매 · 눈썰매도 가능 (현장 결제)</span><span class="stay">테를지 게르</span></li>
+      <li><span class="d">12/29 <em>화</em></span><span class="t">칭기스칸 기마상 → 울란바토르</span><span class="x">투어 종료</span><span class="stay">UB 호텔</span></li>
+      <li><span class="d">12/30 <em>수</em></span><span class="t">간단사원 · 자이승 전망대 · 국영백화점</span><span class="x">말을 한 번 더 타고 싶으면 테를지 당일 투어 추가</span><span class="stay">UB 호텔</span></li>
+      <li><span class="d">12/31 <em>목</em></span><span class="t">광장에서 새해 맞이</span><span class="stay">UB 호텔</span></li>
+      <li><span class="d">1/1 <em>금</em></span><span class="t">휴식</span><span class="x">공휴일이라 문 닫는 곳이 있어요</span><span class="stay">UB 호텔</span></li>
+      <li><span class="d">1/2 <em>토</em></span><span class="t">쇼핑 · 짐 정리</span><span class="stay">UB 호텔</span></li>
+      <li><span class="d">1/3 <em>일</em></span><span class="t">09시 출발 → 12:25 출국 → 16:30 인천</span></li>
+    </ol>
+  </article>
+</section>
+
+<section id="flight" aria-labelledby="flight-h">
+  <h2 id="flight-h">항공권</h2>
+  <p class="sub">세 플랜 모두 같은 비행기 · 위탁수하물 포함</p>
+  <div class="legs">
+    <div class="leg">
+      <div class="end"><span class="code">ICN</span><span class="time">07:45</span><span class="place">인천 제2터미널</span></div>
+      <div class="mid"><svg viewBox="0 0 56 10" aria-hidden="true"><line x1="0" y1="5" x2="50" y2="5" style="stroke:var(--line);stroke-width:2;stroke-dasharray:4 3"/><path d="M48 1 L55 5 L48 9 Z" style="fill:var(--sky)"/></svg>직항<br>3시간 40분</div>
+      <div class="end"><span class="code">UBN</span><span class="time">10:25</span><span class="place">울란바토르</span></div>
+      <div class="meta"><span><b>가는 날</b> 12/25 (금)</span><span>대한항공</span></div>
+    </div>
+    <div class="leg">
+      <div class="end"><span class="code">UBN</span><span class="time">12:25</span><span class="place">울란바토르</span></div>
+      <div class="mid"><svg viewBox="0 0 56 10" aria-hidden="true"><line x1="0" y1="5" x2="50" y2="5" style="stroke:var(--line);stroke-width:2;stroke-dasharray:4 3"/><path d="M48 1 L55 5 L48 9 Z" style="fill:var(--sky)"/></svg>직항<br>3시간 5분</div>
+      <div class="end"><span class="code">ICN</span><span class="time">16:30</span><span class="place">인천</span></div>
+      <div class="meta"><span><b>오는 날</b> 1/3 (일)</span><span>대한항공</span></div>
+    </div>
+  </div>
+  <p class="price">1인 왕복 <b>64.8만</b> · 2인 129.6만 <span class="place">(9/29 Google 항공권 기준)</span></p>
+</section>
+
+<section id="booking" aria-labelledby="booking-h">
+  <h2 id="booking-h">예약 순서</h2>
+  <p class="sub">위에서부터 차례로</p>
+  <ol class="steps">
+    <li><span class="when">지금</span><b>대한항공 왕복 결제</b><p>대한항공 홈페이지에서. 성수기라 기다려도 잘 안 내려가요.</p></li>
+    <li><span class="when">10월</span><b>플랜별 투어 예약</b><p>12월 말 개썰매 운영 여부, 난방 되는 겨울 게르인지, 픽업 장소, 가이드 언어를 확인하세요. 동행을 구해 4~6명이 되면 1인 투어비가 크게 줄어요.</p></li>
+    <li><span class="when">10월</span><b>울란바토르 숙소</b><p>겨울이라 난방 · 온수 후기를 꼭 보세요.</p></li>
+    <li><span class="when">11월</span><b>여행자 보험</b><p>승마 · 개썰매 사고가 보장되는지 약관에서 확인하세요.</p></li>
+    <li><span class="when">출발 2주 전</span><b>eSIM · 현금 · 방한용품</b><p>체험비는 달러, 택시와 시장은 투그릭(₮) 현금이에요.</p></li>
+    <li><span class="when">12/24</span><b>공항 가는 방법 정하기</b><p>07:45 출발이라 05:45까지 제2터미널 도착. 공항철도 첫차로는 빠듯해서 리무진 첫차나 택시, 또는 공항 근처에서 1박하세요.</p></li>
+  </ol>
+</section>
+
+<section id="tips" aria-labelledby="tips-h">
+  <h2 id="tips-h">알아둘 것</h2>
+  <dl class="tips">
+    <div><dt>비자</dt><dd>관광 무비자 최대 90일, 2026년 12월 31일까지 연장 공지. 1월 출국에 대한 언급은 없어서 투어사나 대사관에 한 번 확인하세요.</dd></div>
+    <div><dt>추위</dt><dd>낮 -15℃, 밤 -30℃ 안팎. 시골이 더 춥고, 해는 8시 40분쯤 떠서 5시쯤 집니다.</dd></div>
+    <div><dt>미세먼지</dt><dd>울란바토르는 겨울 석탄 난방 때문에 공기가 나빠요. KF94 마스크를 챙기세요.</dd></div>
+    <div><dt>공항 ↔ 시내</dt><dd>차로 약 1시간. 공항버스 1인 ₮15,000, 택시 ₮75,000~150,000 (현금).</dd></div>
+    <div><dt>통신</dt><dd>시골은 신호가 약해요. 오프라인 지도를 미리 받아두세요.</dd></div>
+  </dl>
+</section>
+
+<section id="pack" aria-labelledby="pack-h">
+  <div class="pack-head"><h2 id="pack-h">준비물</h2><span class="count" id="pack-count">0 / 15</span></div>
+  <p class="sub">체크한 건 이 폰에만 저장돼요. 각자 자기 짐 체크용.</p>
+  <div class="pack">
+    <label><input type="checkbox" id="pk1"><span>구스다운 롱패딩</span></label>
+    <label><input type="checkbox" id="pk2"><span>발열내의 2벌</span></label>
+    <label><input type="checkbox" id="pk3"><span>기모바지나 스키바지</span></label>
+    <label><input type="checkbox" id="pk4"><span>방한화 (한 치수 크게)</span></label>
+    <label><input type="checkbox" id="pk5"><span>두꺼운 양말 여러 켤레</span></label>
+    <label><input type="checkbox" id="pk6"><span>털모자 · 넥워머</span></label>
+    <label><input type="checkbox" id="pk7"><span>장갑 2겹 (얇은 것 + 두꺼운 것)</span></label>
+    <label><input type="checkbox" id="pk8"><span>핫팩 넉넉히</span></label>
+    <label><input type="checkbox" id="pk9"><span>보조배터리 (추위에 폰이 빨리 꺼져요)</span></label>
+    <label><input type="checkbox" id="pk10"><span>KF94 마스크</span></label>
+    <label><input type="checkbox" id="pk11"><span>선글라스 (설원 눈부심)</span></label>
+    <label><input type="checkbox" id="pk12"><span>립밤 · 보습크림</span></label>
+    <label><input type="checkbox" id="pk13"><span>수영복 (400 플랜 온천)</span></label>
+    <label><input type="checkbox" id="pk14"><span>여권 (유효기간 6개월 이상)</span></label>
+    <label><input type="checkbox" id="pk15"><span>달러 소액 · 투그릭</span></label>
+  </div>
+</section>
+
+<footer>
+  가격은 2026년 9월 29일 기준 조회가와 추정치예요. 예약 전에 다시 확인하세요.
+  <ul>
+    <li>항공권: Google 항공권 조회 (2026-09-29)</li>
+    <li><a href="https://mn.mofa.go.kr/mn-ko/brd/m_373/view.do?seq=1339476" target="_blank" rel="noopener">주몽골 대한민국 대사관 · 무사증 입국 연장 공지</a></li>
+    <li><a href="https://experiences.myrealtrip.com/products/3924267" target="_blank" rel="noopener">마이리얼트립 · 겨울 테를지 개썰매 2박3일</a></li>
+    <li><a href="https://experiences.myrealtrip.com/products/3881106" target="_blank" rel="noopener">마이리얼트립 · 겨울몽골 5일 (미니사막 · 하르허링 · 온천 · 테를지)</a></li>
+    <li><a href="https://experiences.myrealtrip.com/products/3756301" target="_blank" rel="noopener">마이리얼트립 · 겨울 홉스골 5박6일</a></li>
+    <li><a href="https://experiences.myrealtrip.com/products/4173268" target="_blank" rel="noopener">마이리얼트립 · 겨울 테를지 1박2일 (개썰매 $41 참고)</a></li>
+    <li><a href="https://en.ulaanbaatar-airport.mn/public-transportation-service" target="_blank" rel="noopener">칭기스칸 국제공항 · 대중교통 안내</a></li>
+    <li><a href="https://www.mymongoliatravel.com/blog/ulaanbaatar-airport-to-city/" target="_blank" rel="noopener">울란바토르 공항 → 시내 교통 요금</a></li>
+    <li><a href="https://www.tripstore.kr/blog/mongolia-weather-winter-tips" target="_blank" rel="noopener">트립스토어 · 몽골 겨울 여행 가이드</a></li>
+  </ul>
+</footer>
+
+</div>
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('[role="tab"]'));
+  var panels=[].slice.call(document.querySelectorAll('[role="tabpanel"]'));
+  function show(id,remember){
+    tabs.forEach(function(t){var on=t.getAttribute('data-plan')===id;t.setAttribute('aria-selected',on?'true':'false');t.tabIndex=on?0:-1;});
+    panels.forEach(function(p){p.hidden=p.id!=='plan-'+id;});
+    if(remember){
+      try{localStorage.setItem('mn-plan',id);}catch(e){}
+      if(history.replaceState){history.replaceState(null,'','#p'+id);}
+    }
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){show(t.getAttribute('data-plan'),true);});
+    t.addEventListener('keydown',function(e){
+      if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft')return;
+      var n=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];
+      n.focus();show(n.getAttribute('data-plan'),true);
+    });
+  });
+  var m=location.hash.match(/^#p(200|300|400)$/);
+  var saved=null;try{saved=localStorage.getItem('mn-plan');}catch(e){}
+  show(m?m[1]:(saved&&/^(200|300|400)$/.test(saved)?saved:'300'),false);
+
+  var boxes=[].slice.call(document.querySelectorAll('.pack input[type="checkbox"]'));
+  var state={};try{state=JSON.parse(localStorage.getItem('mn-pack')||'{}')||{};}catch(e){state={};}
+  var count=document.getElementById('pack-count');
+  function update(){var n=boxes.filter(function(b){return b.checked;}).length;count.textContent=n+' / '+boxes.length;}
+  boxes.forEach(function(b){
+    b.checked=!!state[b.id];
+    b.addEventListener('change',function(){state[b.id]=b.checked;try{localStorage.setItem('mn-pack',JSON.stringify(state));}catch(e){}update();});
+  });
+  update();
+})();
+</script>
+</body>
+</html>
